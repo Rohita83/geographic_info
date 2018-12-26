@@ -16,11 +16,9 @@
 **Pre-requisites:**
 
 	1. System should have installed crystal distro. Check out installation instructions and tutorials https://index.ros.org/doc/ros2/.
-	2. System should have checkout ros2 robot_localization pkg & build (Refer Steps below).
-	3. User should checkout diagnostics pkg & build (Refer steps below).
-	4. System should have both ROS1 & ROS2. Note: We have verified on ROS1(i.e. melodic) & ROS2 (i.e. crystal).
+	2. User should checkout diagnostics pkg & build (Refer steps below).
 
-		1. Steps to checkout diagnostics pkg & build:
+		Steps to checkout diagnostics pkg & build:
 
 			1. mkdir -p diagnostics_ws/src
 			2. cd ~/diagnostics_ws/src
@@ -28,8 +26,10 @@
 			4. cd ~/diagnostics_ws
 			5. source /opt/ros/crystal/setup.bash
 			6. colcon build
-	   
-		2. Steps to checkout robot_localization pkg & build:
+
+	3. System should have checkout ros2 robot_localization pkg & build (Refer Steps below).
+
+		Steps to checkout robot_localization pkg & build:
 
 			1. mkdir -p rl_ws_crystal/src
 			2. cd ~/rl_ws_crystal/src
@@ -41,6 +41,8 @@
 			7. cd ~/diagnostics/install/setup.bash //This command will source to diagnostics pkg
 			8. source /opt/ros/crystal/setup.bash
 			9. colcon build
+
+	4. System should have both ROS1 & ROS2. Note: We have verified on ROS1(i.e. melodic) & ROS2 (i.e. crystal).
 
 **Limitations:-** 
 
