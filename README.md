@@ -7,9 +7,9 @@ robot_localization is a package of nonlinear state estimation nodes.
 **List of changes from ROS1 to ROS2:**
 The changes has been done by following the Migration guide for ROS2( https://index.ros.org/doc/ros2/Migration-Guide/ ).
 
-a) Migrated all test.cpp into ROS2 style
-b) Migrated yaml files into ROS2 style
-c) Migrated .test files into launch.py in ROS2 style
+a. Migrated all test.cpp into ROS2 style
+b. Migrated yaml files into ROS2 style
+c. Migrated .test files into launch.py in ROS2 style
 
 **Pre-requisites:**
 a) System should have installed crystal distro. Check out installation instructions and tutorials https://index.ros.org/doc/ros2/. 
