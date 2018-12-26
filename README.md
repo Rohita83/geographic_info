@@ -2,9 +2,11 @@
 **This file describes steps to perform test on the robot localization package for ROS2 (crystal) and other required stuff.**
 
 **Overview:**
+
 	robot_localization is a package of nonlinear state estimation nodes.
 
 **List of changes from ROS1 to ROS2:**
+
 	The changes has been done by following the Migration guide for ROS2( https://index.ros.org/doc/ros2/Migration-Guide/ ).
 
 	1. Migrated all test.cpp into ROS2 style
@@ -12,6 +14,7 @@
 	3. Migrated .test files into launch.py in ROS2 style
 
 **Pre-requisites:**
+
 	1. System should have installed crystal distro. Check out installation instructions and tutorials https://index.ros.org/doc/ros2/.
 	2. System should have checkout ros2 robot_localization pkg & build (Refer Steps below).
 	3. User should checkout diagnostics pkg & build (Refer steps below).
