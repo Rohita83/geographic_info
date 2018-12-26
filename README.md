@@ -97,63 +97,63 @@ There are two ways to run the test cases:
 
 2)*******test_ekf_localization_node_bag2.launch.py*******
 
-Terminal1:-
-1. source /opt/ros/melodic/setup.bash
-2. roscore
+	Terminal1:-
+	1. source /opt/ros/melodic/setup.bash
+	2. roscore
 
-Terminal2:- (Run ros1_bridge):-
-1. source ~/ros2_ws/install/setup.bash
-2. source /opt/ros/melodic/setup.bash
-3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
+	Terminal2:- (Run ros1_bridge):-
+	1. source ~/ros2_ws/install/setup.bash
+	2. source /opt/ros/melodic/setup.bash
+	3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
 
-Terminal3:- (Play .bag from ROS1):-
-1. source /opt/ros/melodic/setup.bash
-2. rosparam set /use_sim_time true
-3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test2.bag --clock -d 5
+	Terminal3:- (Play .bag from ROS1):-
+	1. source /opt/ros/melodic/setup.bash
+	2. rosparam set /use_sim_time true
+	3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test2.bag --clock -d 5
 
-Terminal4:- (Launch TestCase launch.py):-
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf_localization_node_bag2.launch.py
+	Terminal4:- (Launch TestCase launch.py):-
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf_localization_node_bag2.launch.py
 
 3)*******test_ekf_localization_node_bag3.launch.py*******
 
-Terminal1:-
-1. source /opt/ros/melodic/setup.bash
-2. roscore
+	Terminal1:-
+	1. source /opt/ros/melodic/setup.bash
+	2. roscore
 
-Terminal2:- (Run ros1_bridge):-
-1. source ~/ros2_ws/install/setup.bash
-2. source /opt/ros/melodic/setup.bash
-3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
+	Terminal2:- (Run ros1_bridge):-
+	1. source ~/ros2_ws/install/setup.bash
+	2. source /opt/ros/melodic/setup.bash
+	3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
 
-Terminal3:- (Play .bag from ROS1):-
-1. source /opt/ros/melodic/setup.bash
-2. rosparam set /use_sim_time true
-3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test3.bag --clock -d 5
+	Terminal3:- (Play .bag from ROS1):-
+	1. source /opt/ros/melodic/setup.bash
+	2. rosparam set /use_sim_time true
+	3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test3.bag --clock -d 5
 
-Terminal4:- (Launch TestCase launch.py):-
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf_localization_node_bag3.launch.py
+	Terminal4:- (Launch TestCase launch.py):-
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf_localization_node_bag3.launch.py
 
 4)*******test_ekf_localization_node_interfaces.launch.py*******
 
-Terminal1:- (Launch TestCase .launch.py)
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf_localization_node_interfaces.launch.py
+	Terminal1:- (Launch TestCase .launch.py)
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf_localization_node_interfaces.launch.py
 
 5)*******test_ekf.launch.py*******
 
-Terminal1:- (Launch TestCase .launch.py)
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf.launch.py
+	Terminal1:- (Launch TestCase .launch.py)
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf.launch.py
 
 6)*******test_filter_base_diagnostics_timestamps.launch.py*******
 
-Terminal1:- (Launch TestCase .launch.py)
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_filter_base_diagnostics_timestamps.launch.py
+	Terminal1:- (Launch TestCase .launch.py)
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_filter_base_diagnostics_timestamps.launch.py
