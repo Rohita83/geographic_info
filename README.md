@@ -43,26 +43,29 @@
 			9. colcon build
 
 **Limitations:-** 
+
 	1. colcon test does not work as launch.py files can not be executed/added with CMakeLists.txt as of now.
 	2. Each test/launch.py files have been tested independently.
 	3. Use of ros1 bridge to play rosbag files as rosbag is not available in ros2.
 	4. Bag related testcases launch files will not terminate automatically i.e. user will have to do manually ctrl+C after bag duration finish.
 
 **Future Work:-**
-1. All Test launch.py files should be executed using "colcon test" automatically. Currently we have built automated script "robot_localization_test_cases.sh" which performs all the test cases except bag related test cases.
-2. Remove the dependency with ros1_bridge to play bag file from ROS1 using rosbag.
+
+	1. All Test launch.py files should be executed using "colcon test" automatically. Currently we have built automated script "robot_localization_test_cases.sh" which performs all the test cases except bag related test cases.
+	2. Remove the dependency with ros1_bridge to play bag file from ROS1 using rosbag.
 
 **TESTING:**
 
 There are two ways to run the test cases:
-1. Using automated scripts
-The script files are placed in the /test folder of robot localization.
-Go to the test folder path and run the shell scripts provided that you have downloaded the git source code explained above.
 
-2. Using launch files independently
-Below are the steps to run the test case independently using launch files.
-In order to run the UKF related test cases, follow same steps as of EKF. Just replace ekf with ukf.
-e.g. test_ukf_localization_node_bag1.launch.py
+	1. Using automated scripts
+	The script files are placed in the /test folder of robot localization.
+	Go to the test folder path and run the shell scripts provided that you have downloaded the git source code explained above.
+
+	2. Using launch files independently
+	Below are the steps to run the test case independently using launch files.
+	In order to run the UKF related test cases, follow same steps as of EKF. Just replace ekf with ukf.
+	e.g. test_ukf_localization_node_bag1.launch.py
 
 1)*******test_ekf_localization_node_bag1.launch.py*******
 
