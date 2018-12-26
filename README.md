@@ -17,27 +17,27 @@ The changes has been done by following the Migration guide for ROS2( https://ind
 3. User should checkout diagnostics pkg & build (Refer steps below).
 4. System should have both ROS1 & ROS2. Note: We have verified on ROS1(i.e. melodic) & ROS2 (i.e. crystal).
 
-1. Steps to checkout diagnostics pkg & build:
+	1. Steps to checkout diagnostics pkg & build:
 
-   1. mkdir -p diagnostics_ws
-   2. cd ~/diagnostics_ws/src
-   3. git clone git@github.com:vaibhavbhadade/diagnostics.git //branch should be remotes/origin/ros2-devel 
-   4. cd ~/diagnostics_ws
-   5. source /opt/ros/crystal/setup.bash
-   6. colcon build
+   		1. mkdir -p diagnostics_ws
+   		2. cd ~/diagnostics_ws/src
+   		3. git clone git@github.com:vaibhavbhadade/diagnostics.git //branch should be remotes/origin/ros2-devel 
+   		4. cd ~/diagnostics_ws
+   		5. source /opt/ros/crystal/setup.bash
+   		6. colcon build
    
-2. Steps to checkout robot_localization pkg & build:
+	2. Steps to checkout robot_localization pkg & build:
 
-   1. mkdir -p rl_ws_crystal/src
-   2. cd ~/rl_ws_crystal/src
-   3. git clone git@github.com:Rohita83/robot_localization.git
-   #git branch -ra //This command will show different branches of main git on #kinetic
-   4. cd robot_localization/
-   5. git checkout -b ros2-crystal-devel remotes/origin/ros2-crystal-devel
-   6. cd ~/rl_ws_crystal
-   7. cd ~/diagnostics/install/setup.bash //This command will source to diagnostics pkg
-   8. source /opt/ros/crystal/setup.bash
-   9. colcon build
+   		1. mkdir -p rl_ws_crystal/src
+   		2. cd ~/rl_ws_crystal/src
+   		3. git clone git@github.com:Rohita83/robot_localization.git
+   		#git branch -ra //This command will show different branches of main git on #kinetic
+   		4. cd robot_localization/
+   		5. git checkout -b ros2-crystal-devel remotes/origin/ros2-crystal-devel
+   		6. cd ~/rl_ws_crystal
+   		7. cd ~/diagnostics/install/setup.bash //This command will source to diagnostics pkg
+   		8. source /opt/ros/crystal/setup.bash
+   		9. colcon build
 
 **Limitations:-** 
 1. colcon test does not work as launch.py files can not be executed/added with CMakeLists.txt as of now.
