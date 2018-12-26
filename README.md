@@ -40,14 +40,14 @@ The changes has been done by following the Migration guide for ROS2( https://ind
    		9. colcon build
 
 **Limitations:-** 
-1. colcon test does not work as launch.py files can not be executed/added with CMakeLists.txt as of now.
-2. Each test/launch.py files have been tested independently.
-3. Use of ros1 bridge to play rosbag files as rosbag is not available in ros2.
-4. Bag related testcases launch files will not terminate automatically i.e. user will have to do manually ctrl+C after bag duration finish.
+	1. colcon test does not work as launch.py files can not be executed/added with CMakeLists.txt as of now.
+	2. Each test/launch.py files have been tested independently.
+	3. Use of ros1 bridge to play rosbag files as rosbag is not available in ros2.
+	4. Bag related testcases launch files will not terminate automatically i.e. user will have to do manually ctrl+C after bag duration finish.
 
 **Future Work:-**
-1. All Test launch.py files should be executed using "colcon test" automatically. Currently we have built automated script "robot_localization_test_cases.sh" which performs all the test cases except bag related test cases.
-2. Remove the dependency with ros1_bridge to play bag file from ROS1 using rosbag.
+	1. All Test launch.py files should be executed using "colcon test" automatically. Currently we have built automated script "robot_localization_test_cases.sh" which performs all the test cases except bag related test cases.
+	2. Remove the dependency with ros1_bridge to play bag file from ROS1 using rosbag.
 
 **TESTING:**
 
@@ -64,88 +64,88 @@ e.g. test_ukf_localization_node_bag1.launch.py
 1)*******test_ekf_localization_node_bag1.launch.py*******
 
 Terminal1:-
-1. source /opt/ros/melodic/setup.bash
-2. roscore
+	1. source /opt/ros/melodic/setup.bash
+	2. roscore
 
 Terminal2:- (Run ros1_bridge):-
-1. source ~/ros2_ws/install/setup.bash
-2. source /opt/ros/melodic/setup.bash
-3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
+	1. source ~/ros2_ws/install/setup.bash
+	2. source /opt/ros/melodic/setup.bash
+	3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
 
 Terminal3:- (Play .bag from ROS1):-
-1. source /opt/ros/melodic/setup.bash
-2 rosparam set /use_sim_time true
-3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test1.bag --clock -d 5
+	1. source /opt/ros/melodic/setup.bash
+	2. rosparam set /use_sim_time true
+	3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test1.bag --clock -d 5
 
 Terminal4:- (Launch TestCase launch.py):-
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf_localization_node_bag1.launch.py
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf_localization_node_bag1.launch.py
 
 Terminal5:- (Run static_transform_publisher):-
-1. source /opt/ros/crystal/setup.bash
-2. ros2 run tf2_ros static_transform_publisher 0 -0.3 0.52 -1.570796327 0 1.570796327 base_link imu_link
+	1. source /opt/ros/crystal/setup.bash
+	2. ros2 run tf2_ros static_transform_publisher 0 -0.3 0.52 -1.570796327 0 1.570796327 base_link imu_link
 
 
 2)*******test_ekf_localization_node_bag2.launch.py*******
 
 Terminal1:-
-1. source /opt/ros/melodic/setup.bash
-2. roscore
+	1. source /opt/ros/melodic/setup.bash
+	2. roscore
 
 Terminal2:- (Run ros1_bridge):-
-1. source ~/ros2_ws/install/setup.bash
-2. source /opt/ros/melodic/setup.bash
-3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
+	1. source ~/ros2_ws/install/setup.bash
+	2. source /opt/ros/melodic/setup.bash
+	3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
 
 Terminal3:- (Play .bag from ROS1):-
-1. source /opt/ros/melodic/setup.bash
-2. rosparam set /use_sim_time true
-3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test2.bag --clock -d 5
+	1. source /opt/ros/melodic/setup.bash
+	2. rosparam set /use_sim_time true
+	3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test2.bag --clock -d 5
 
 Terminal4:- (Launch TestCase launch.py):-
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf_localization_node_bag2.launch.py
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf_localization_node_bag2.launch.py
 
 3)*******test_ekf_localization_node_bag3.launch.py*******
 
 Terminal1:-
-1. source /opt/ros/melodic/setup.bash
-2. roscore
+	1. source /opt/ros/melodic/setup.bash
+	2. roscore
 
 Terminal2:- (Run ros1_bridge):-
-1. source ~/ros2_ws/install/setup.bash
-2. source /opt/ros/melodic/setup.bash
-3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
+	1. source ~/ros2_ws/install/setup.bash
+	2. source /opt/ros/melodic/setup.bash
+	3. ros2 run ros1_bridge dynamic_bridge --bridge-all-topics	
 
 Terminal3:- (Play .bag from ROS1):-
-1. source /opt/ros/melodic/setup.bash
-2. rosparam set /use_sim_time true
-3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test3.bag --clock -d 5
+	1. source /opt/ros/melodic/setup.bash
+	2. rosparam set /use_sim_time true
+	3. rosbag play ~/rl_ws_crystal/src/robot_localization/test/test3.bag --clock -d 5
 
 Terminal4:- (Launch TestCase launch.py):-
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf_localization_node_bag3.launch.py
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf_localization_node_bag3.launch.py
 
 4)*******test_ekf_localization_node_interfaces.launch.py*******
 
 Terminal1:- (Launch TestCase .launch.py)
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf_localization_node_interfaces.launch.py
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf_localization_node_interfaces.launch.py
 
 5)*******test_ekf.launch.py*******
 
 Terminal1:- (Launch TestCase .launch.py)
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_ekf.launch.py
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_ekf.launch.py
 
 6)*******test_filter_base_diagnostics_timestamps.launch.py*******
 
 Terminal1:- (Launch TestCase .launch.py)
-1. source /opt/ros/crystal/setup.bash
-2. source ~/rl_ws_crystal/install/setup.bash
-3. ros2 launch robot_localization test_filter_base_diagnostics_timestamps.launch.py
+	1. source /opt/ros/crystal/setup.bash
+	2. source ~/rl_ws_crystal/install/setup.bash
+	3. ros2 launch robot_localization test_filter_base_diagnostics_timestamps.launch.py
