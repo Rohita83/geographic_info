@@ -7,15 +7,15 @@ robot_localization is a package of nonlinear state estimation nodes.
 **List of changes from ROS1 to ROS2:**
 The changes has been done by following the Migration guide for ROS2( https://index.ros.org/doc/ros2/Migration-Guide/ ).
 
-a)Migrated all test.cpp into ROS2 style
-b)Migrated yaml files into ROS2 style
-c)Migrated .test files into launch.py in ROS2 style
+a) Migrated all test.cpp into ROS2 style
+b) Migrated yaml files into ROS2 style
+c) Migrated .test files into launch.py in ROS2 style
 
 **Pre-requisites:**
-a).	System should have installed crystal distro. Check out installation instructions and tutorials https://index.ros.org/doc/ros2/. 
-b). System should have checkout ros2 robot_localization pkg & build (Refer Steps below).
-c). User should checkout diagnostics pkg & build (Refer steps below).
-d). System should have both ROS1 & ROS2. Note: We have verified on ROS1(i.e. melodic) & ROS2 (i.e. crystal).
+a) System should have installed crystal distro. Check out installation instructions and tutorials https://index.ros.org/doc/ros2/. 
+b) System should have checkout ros2 robot_localization pkg & build (Refer Steps below).
+c) User should checkout diagnostics pkg & build (Refer steps below).
+d) System should have both ROS1 & ROS2. Note: We have verified on ROS1(i.e. melodic) & ROS2 (i.e. crystal).
 
 1. Steps to checkout robot_localization pkg & build:
 
@@ -40,14 +40,14 @@ d). System should have both ROS1 & ROS2. Note: We have verified on ROS1(i.e. mel
 	colcon build
 
 **Limitations:-** 
-a)colcon test does not work as launch.py files can not be executed/added with CMakeLists.txt as of now.
-b)Each test/launch.py files have been tested independently.
-c)Use of ros1 bridge to play rosbag files as rosbag is not available in ros2.
-d)Bag related testcases launch files will not terminate automatically i.e. user will have to do manually ctrl+C after bag duration finish.
+a) colcon test does not work as launch.py files can not be executed/added with CMakeLists.txt as of now.
+b) Each test/launch.py files have been tested independently.
+c) Use of ros1 bridge to play rosbag files as rosbag is not available in ros2.
+d) Bag related testcases launch files will not terminate automatically i.e. user will have to do manually ctrl+C after bag duration finish.
 
 **Future Work:-**
-1. All Test launch.py files should be executed using "colcon test" automatically. Currently we have built automated script "robot_localization_test_cases.sh" which performs all the test cases except bag related test cases.
-2. Remove the dependency with ros1_bridge to play bag file from ROS1 using rosbag.
+a) All Test launch.py files should be executed using "colcon test" automatically. Currently we have built automated script "robot_localization_test_cases.sh" which performs all the test cases except bag related test cases.
+b) Remove the dependency with ros1_bridge to play bag file from ROS1 using rosbag.
 
 **TESTING:**
 
