@@ -146,6 +146,6 @@ ros2 launch robot_localization test_ekf.launch.py
 6)*******test_filter_base_diagnostics_timestamps.launch.py*******
 
 Terminal1:- (Launch TestCase .launch.py)
-source /opt/ros/crystal/setup.bash
-source ~/rl_ws_crystal/install/setup.bash
-ros2 launch robot_localization test_filter_base_diagnostics_timestamps.launch.py
+> source /opt/ros/crystal/setup.bash
+> source ~/rl_ws_crystal/install/setup.bash
+> ros2 launch robot_localization test_filter_base_diagnostics_timestamps.launch.py
