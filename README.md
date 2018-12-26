@@ -19,25 +19,25 @@ The changes has been done by following the Migration guide for ROS2( https://ind
 
 1. Steps to checkout robot_localization pkg & build:
 
-mkdir -p rl_ws_crystal/src
-cd ~/rl_ws_crystal/src
-git clone git@github.com:Rohita83/robot_localization.git
- #git branch -ra //This command will show different branches of main git on #kinetic
-cd robot_localization/
-git checkout -b ros2-crystal-devel remotes/origin/ros2-crystal-devel
-cd ~/rl_ws_crystal
-source /opt/ros/crystal/setup.bash
-colcon build
+   mkdir -p rl_ws_crystal/src
+   cd ~/rl_ws_crystal/src
+   git clone git@github.com:Rohita83/robot_localization.git
+   #git branch -ra //This command will show different branches of main git on #kinetic
+   cd robot_localization/
+   git checkout -b ros2-crystal-devel remotes/origin/ros2-crystal-devel
+   cd ~/rl_ws_crystal
+   source /opt/ros/crystal/setup.bash
+   colcon build
 
 2. Steps to checkout diagnostics pkg & build:
 
-cd ~/rl_ws_crystal/src
-git clone git@github.com:vaibhavbhadade/diagnostics.git
-cd ~/diagnostics
-git checkout -b ros2-devel remotes/origin/ros2-devel
-cd ~/rl_ws_crystal
-source /opt/ros/crystal/setup.bash
-colcon build
+   cd ~/rl_ws_crystal/src
+   git clone git@github.com:vaibhavbhadade/diagnostics.git
+   cd ~/diagnostics
+   git checkout -b ros2-devel remotes/origin/ros2-devel
+   cd ~/rl_ws_crystal
+   source /opt/ros/crystal/setup.bash
+   colcon build
 
 **Limitations:-** 
 1. colcon test does not work as launch.py files can not be executed/added with CMakeLists.txt as of now.
